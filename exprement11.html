@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Profile Cards — Flexbox Layout</title>
+  <style>
+    :root{
+      --bg:#f6f7f9;
+      --card:#ffffff;
+      --muted:#7b7b7b;
+      --accent:#1488ff;
+      --radius:12px;
+      --shadow: 0 6px 18px rgba(15,15,15,0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial}
+    body{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:40px}
+    .frame{
+      width:min(1100px,96%);
+      border:3px solid #222;
+      padding:28px 36px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0.35));
+    }
+
+    .cards-row{
+      display:flex;                
+      flex-direction:row;         
+      justify-content:center;     
+      align-items:flex-start;     
+      gap:34px;                    
+      padding:18px 10px;
+      flex-wrap:wrap;              
+    }
+
+    .card{
+      width:260px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px 18px 22px 18px;
+      text-align:center;
+      position:relative;
+      transition:transform .18s ease, box-shadow .18s ease;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(12,20,40,0.12)}
+
+    .avatar{
+      width:72px;height:72px;border-radius:50%;
+      background:var(--accent);
+      display:flex;align-items:center;justify-content:center;
+      color:rgb(248, 244, 236);font-weight:700;font-size:18px;
+      box-shadow:0 6px 16px rgba(20,136,255,0.18);
+      margin-top:-52px; 
+    }
+
+    .name{margin-top:12px;font-weight:700;font-size:16px;color:#111}
+    .meta{margin-top:8px;font-size:13px;color:var(--muted);line-height:1.4}
+
+   
+    .separator{width:2px;height:84px;background:rgba(0,0,0,0.03);position:relative;}
+
+   
+    @media (max-width:720px){
+      .cards-row{flex-direction:column;align-items:center}
+      .card{width:86%;max-width:360px}
+    }
+  </style>
+</head>
+<body>
+  <div class="frame" aria-label="Student cards frame">
+    <div class="cards-row">
+
+      <div class="card">
+        <div class="avatar" aria-hidden="true">SB</div>
+        <div class="name">Shivansh Bhatnagar</div>
+        <div class="meta">B.Tech - CSE-26<br>Roll No: 2025b01010121<br>1st Year</div>
+      </div>
+
+      <div class="card">
+        <div class="avatar" aria-hidden="true">AR</div>
+        <div class="name">Asha Rani</div>
+        <div class="meta">B.Tech - IT<br>Roll No: 2025b010101188<br>1st Year</div>
+      </div>
+
+      <div class="card">
+        <div class="avatar" aria-hidden="true">RK</div>
+        <div class="name">Rohit Kumar</div>
+        <div class="meta">B.Tech - ECE<br>Roll No: 2025b010101727<br>1st Year</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

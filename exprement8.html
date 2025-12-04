@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amazon Clone - Category Layout</title>
+    <style>
+      /* Logo Section */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+        background-color: white;
+      }
+
+      .Logo {
+        width: 250px;
+        height: auto;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #232f3e;
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 18px;
+      }
+
+      .navbar a:hover {
+        text-decoration: underline;
+      }
+
+      /* Category Boxes (each box contains 4 products) */
+      .category {
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        margin: 40px auto;
+        padding: 25px;
+        width: 90%;
+        max-width: 1200px;
+      }
+
+      .category h2 {
+        margin-bottom: 20px;
+        color: #232f3e;
+        border-bottom: 2px solid #ff9900;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+      }
+      .product button {
+        background-color: #ff9900;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .product button:hover {
+        background-color: #e68a00;
+      }
+       body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      background-color: #222;
+      color: white;
+      padding: 15px 0;
+      margin: 0;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .product img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .product p {
+      color: #555;
+      font-weight: bold;
+    }
+
+    @media (max-width: 800px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <!-- Logo -->
+    <div class="container">
+      <img
+        class="Logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+        alt="Amazon Logo"
+      />
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Mobiles</a>
+      <a href="#">Electronics</a>
+      <a href="#">Fashion</a>
+      <a href="#">Deals</a>
+      <a href="#">Customer Service</a>
+    </div>
+
+   <div class="product-grid">
+    <!-- Row 1 -->
+    <div class="product">
+      <img src="https://imgs.search.brave.com/1nLqxeN9baeLbICCLf-3D71MK2lx9GOUEMEK1ur1MWc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbGF0/Zm9ybS50aGV2ZXJn/ZS5jb20vd3AtY29u/dGVudC91cGxvYWRz/L3NpdGVzLzIvY2hv/cnVzL3VwbG9hZHMv/Y2hvcnVzX2Fzc2V0/L2ZpbGUvMjU2MTI4/NzEvRFNDMDgzMDgu/SlBHP3F1YWxpdHk9/OTAmc3RyaXA9YWxs/JmNyb3A9MC4xMzI5/Nzg3MjM0MDQyNSww/LDk5LjczNDA0MjU1/MzE5MiwxMDAmdz0y/NDAw" alt="Phone">
+      <h3>iPhone 16</h3>
+      <p>₹72,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/5cpfWmthyL2yPiFtcPsxCgGZYo_LhDG-2e-Sf1is4ck/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2Ftc3VuZ21vYmls/ZXByZXNzLmNvbS9m/aWxlL0ZCNDlFQzYz/RkFBREMzNkE4QkY2/RTBBNEI1RTI2Qzk3/OTgyMzgzRjY1MzE5/MzlGMzlDRjM5RTJG/NDE2MzU2QjFGQUY5/MzA2MUUyRkNCN0FC/MTQzQzk0OEYyMjRG/MjhDMjkwM0RBQzU5/N0REMzc5Njk5NjQz/NjJBNUJBQjVBOEVC/OERDRjdENERDMTAw/RjEyNzAwN0VBMkU2/RUIwNzIzNUMxMzE4/QkM1M0ZBOTQwODNB/MDkxQUUxQ0UxQzYz/RTk2QkY3QjM4OEFB/RDcxOEVCRkU1OUYw/MzhDRjc4NjhCNkZD/RThCRTkwRUFENjZE/MzVBQzE3MTE2QjFF/REYyQzU1MEM0RUFE/NzZCQkYzMEM4MzBF/OEQwMURGNERBNzgy/RjQ4OA" alt="Phone">
+      <h3>Samsung Galaxy S25</h3>
+      <p>₹68,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/mPgxomJO9I4ZYxFP6y1Z5DCZPNmLZbL1tH5qICMpesg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9ydWtt/aW5pbTIuZmxpeGNh/cnQuY29tL2ltYWdl/LzMxMi8zMTIveGlm/MHEvY29tcHV0ZXIv/ay9yLzAvLW9yaWdp/bmFsLWltYWhjZDlu/ZnNucnNjNm4uanBl/Zz9xPTcw" alt="Laptop">
+      <h3>HP Pavilion Intel Core i5 13th Gen 1340P</h3>
+      <p>₹64,890</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/IoNon9l_hsWz0u6j-fCtQmPy8dO0hRgMM_roD8GLArg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMjI0/MzcxODc2OC9waG90/by9hcHBsZS1tYWNi/b29rLWFpci0xMy1t/NC1za3ktYmx1ZS1j/b2xvci0yMDI1LWxh/cHRvcC1pbi1hLWJv/eC1vbi1ibGFjay1k/ZXNrLXRvcC11bnBh/Y2tpbmctdG9wLndl/YnA_YT0xJmI9MSZz/PTYxMng2MTImdz0w/Jms9MjAmYz1OVUda/Q0w0UUZUQjQwVFAt/Q2Z5ZmdGYUtpSTNt/ajRHVm5hb1hHNGdN/UzNJPQ" alt="Laptop">
+      <h3>Apple Macbook Air M4 Chip/ 13.6 Inch/ 34.46 cm/ 16GB/ 256GB</h3>
+      <p>₹99,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="product">
+      <img src="https://imgs.search.brave.com/KgBwdha-DldKhMyXL9XwyBMwCM18UrdAlVooOoLQsTg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4y/LmNlbGxwaG9uZXMu/Y29tLnZuL2luc2Vj/dXJlL3JzOmZpbGw6/MDowL3E6MTAwL3Bs/YWluL2h0dHBzOi8v/Y2VsbHBob25lcy5j/b20udm4vbWVkaWEv/d3lzaXd5Zy90YWJs/ZXQvYXBwbGUvaVBh/ZC1BaXItMi5qcGc" alt="Tablet">
+      <h3>iPad Air</h3>
+      <p>₹64,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/EkCr786XSdCjwb507x1y2aU06vIwU8z8gXzXfxXoW9c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFsQVBYSVZ5Skwu/anBn" alt="Tablet">
+      <h3>Lenovo Tablet M11, 11.0" WUXGA</h3>
+      <p>₹22,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/6M54j0kHICSdESOdx4V0Ced1MTJ036P7489VniEUNiI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMubWFjcnVtb3Jz/LmNvbS9hcnRpY2xl/LW5ldy8yMDIwLzA5/L2FwcGxlLXdhdGNo/LXNlLTMtaGVhbHRo/LWZlYXR1cmVzLmpw/Zw" alt="Watch">
+      <h3>Apple Watch SE 3</h3>
+      <p>₹31,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/k9D7DU_DMRhGRXF7IalzbxN9JnD9FCPJyE-_T1FMHNg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9nY2Fz/ZS5pbi9jZG4vc2hv/cC9wcm9kdWN0cy82/MVY4a001T2RyTC5f/U1k0NTBfNDUweC5q/cGc_dj0xNjU3NjI0/OTcz" alt="Watch">
+      <h3>Noise ColorFit PRO 3</h3>
+      <p>₹4,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="product">
+      <img src="https://imgs.search.brave.com/OfKuC6iG7sYT2IZCTeaRSo9pqSRVSMypOsKtyS8Oz4c/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDE2dCtVWWlVOEwu/anBn" alt="Headphones">
+      <h3>Boat Rockerz Plus 550</h3>
+      <p>₹1,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/wq_IA7iQju4s8G9dm5pSRuBBOl3xRd9Sjsq7Li8AFps/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGVhZHBob25lem9u/ZS5pbi9jZG4vc2hv/cC9wcm9kdWN0cy9I/ZWFkcGhvbmUtWm9u/ZS1Tb255LVdILTEw/MDBYTTQtQmxhY2st/MTE2MC0xMTYwLTEx/LmpwZz92PTE1OTc5/OTEzNTkmd2lkdGg9/MTE2MA" alt="Headphones">
+      <h3>Sony WH-1000XM4</h3>
+      <p>₹24,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/SYv4PtoEeZclQXj_wZ4EWEaF1rwRGPtzwx8Kb3_r7EY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFpVWJDTytRLUwu/anBn" alt="TV">
+      <h3>Mi Smart TV 43"</h3>
+      <p>₹32,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/Hx3yyo75YTbxd8aPr54XUeTJ4FyD9FF-gfZGDHZnjHk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly92YXNh/bnRoYW5kY28uaW4v/VXBsb2FkZWRGaWxl/cy9wcm9kdWN0aW1h/Z2VzLzIwMjQxMTIz/MDYxMDEzLVVudGl0/bGVkLTEucG5n" alt="TV">
+      <h3>Samsung QLED</h3>
+      <p>₹1,09,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="product">
+      <img src="https://imgs.search.brave.com/Q_y6fFJjwKY6W7yP6FAlio8n8dpgl0WI9epG8vd1G1Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/MzExMGR6SVI3aEwu/anBn" alt="Camera">
+      <h3>Canon EOS 200D</h3>
+      <p>₹59,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/lDVgXLrv-Ru6GfpF9MZKnl91cy3CFcfu-X7kZBOlmBY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hbWF0/ZXVycGhvdG9ncmFw/aGVyLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvc2l0ZXMvNy8y/MDE3LzA2L25pa29u/X2Q1NjAwX3Byb2R1/Y3RzaG90c18wMS1l/MTczODEwNDg1ODMy/My5qcGc_dz0xMDI0" alt="Camera">
+      <h3>Nikon D3500</h3>
+      <p>₹47,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/plzWMZp8326R7JCSifTVVUaVp_albKXCg5gGfbd6WLo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90b21z/dGVrLnVzL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIxLzA3L0pC/TEdvM1RvcEZyb250/UmlnaHRfMDAxLTgy/NXg1MTAuanBn" alt="Speaker">
+      <h3>JBL Go 3</h3>
+      <p>₹2,999</p>
+      <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://imgs.search.brave.com/D3ijyt_o7olgt6WxyPjzULayyzRS0Fo8VdNc43jc6ac/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2hvcHl2aXNpb24u/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI0LzAzL2JvQXQt/U3RvbmUtNjIwLUJs/dWV0b290aC1TcGVh/a2VyLXdpdGgtMTJX/LVJNUy1TdGVyZW8t/U291bmQtMi5qcGc" alt="Speaker">
+      <h3>Boat Stone 620</h3>
+      <p>₹1,899</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  </body>
+</html>

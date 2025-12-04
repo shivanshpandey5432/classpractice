@@ -1,0 +1,114 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f5f7;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Main content */
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    /* Product card */
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      background-color: #f9f9f9;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+      margin: 8px 0 15px 0;
+    }
+
+    .price {
+      color: #008000;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 0 0 8px 8px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">ShopEasy</div>
+
+  <!-- Main Product Card -->
+  <div class="main">
+    <div class="card">
+      <img src="image.png" alt="T-Shirt">
+      <div class="card-content">
+        <h3>Classic Cotton T-Shirt</h3>
+        <p>Soft, breathable cotton. Regular fit. Available in multiple colors.</p>
+        <span class="price">₹799</span>
+        <span class="old-price">₹1,199</span>
+      </div>
+      <button class="btn">Add to Cart</button>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Major Versions of HTML</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: white;
+        margin: 40px;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 40px;
+        color: #1a1a1a;
+        font-size: 28px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 120px;
+        align-items: flex-start;
+    }
+
+    .block-wrapper {
+        border: 2px solid #bdd7ff;
+        padding: 20px 25px;
+        border-radius: 12px;
+        background: #f8fbff;
+        display: inline-block;
+    }
+
+    .block-box {
+        border: 2px solid #6ea8fe;
+        background: #e8f1ff;
+        padding: 14px 30px;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .inline-wrapper {
+        border: 2px solid #f0c36a;
+        padding: 20px 25px;
+        border-radius: 12px;
+        background: #fffaf0;
+        display: inline-block;
+    }
+
+    .inline-box {
+        display: inline-block;
+        border: 2px solid #f0ac41;
+        background: #fff5df;
+        padding: 14px 30px;
+        border-radius: 10px;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .label {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #444;
+    }
+</style>
+</head>
+
+<body>
+
+    <h1>Major Versions of HTML</h1>
+
+    <div class="container">
+
+        <div>
+            <div class="block-wrapper">
+                <div class="block-box">Box 1</div>
+                <div class="block-box">Box 2</div>
+                <div class="block-box">Box 3</div>
+                <div class="block-box">Box 4</div>
+            </div>
+            <div class="label">Block-Level Element</div>
+        </div>
+
+        <div>
+            <div class="inline-wrapper">
+                <div class="inline-box">Box 1</div>
+                <div class="inline-box">Box 2</div>
+                <div class="inline-box">Box 3</div>
+                <div class="inline-box">Box 4</div>
+            </div>
+            <div class="label">Inline Element</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
